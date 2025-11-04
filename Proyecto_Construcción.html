@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovaCemento Low-C - Cemento Sostenible</title>
+    <!-- Vinculamos el archivo CSS externo -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌱 InnovaCemento Low-C</div>
+            <ul>
+                <li><a onclick="showPage('inicio')" class="nav-link active">Inicio</a></li>
+                <li><a onclick="showPage('materiales')" class="nav-link">Materiales del Futuro</a></li>
+                <li><a onclick="showPage('ficha')" class="nav-link">Ficha Técnica</a></li>
+                <li><a onclick="showPage('impacto')" class="nav-link">Análisis de Impacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PÁGINA: INICIO -->
+    <div id="inicio" class="page active">
+        <div class="hero">
+            <h1>Cemento del Futuro, Hoy</h1>
+            <p>Reducimos la huella de carbono sin comprometer la calidad</p>
+            <button class="cta-button" onclick="showPage('materiales')">Descubre Nuestros Productos</button>
+            <button class="cta-button" onclick="showPage('ficha')">Comparador Sostenible</button>
+        </div>
+
+        <div class="container">
+            <h2>¿Por qué InnovaCemento Low-C?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🌍 Reducción de Carbono</h3>
+                    <p>Nuestros productos contienen hasta un 40% menos de CO₂ equivalente comparado con el cemento tradicional, contribuyendo activamente a la lucha contra el cambio climático.</p>
+                </div>
+                <div class="card">
+                    <h3>♻️ Materiales Reciclados</h3>
+                    <p>Utilizamos materiales reciclados y residuos industriales que de otro modo terminarían en rellenos sanitarios, cerrando el ciclo de vida de los recursos.</p>
+                </div>
+                <div class="card">
+                    <h3>🔧 Misma Resistencia</h3>
+                    <p>Nuestro cemento mantiene las mismas propiedades técnicas y resistencia que el cemento tradicional, sin sacrificar calidad ni durabilidad.</p>
+                </div>
+            </div>
+
+            <h2>Nuestra Misión</h2>
+            <p>Transformar la industria de la construcción mediante soluciones sostenibles que demuestren que la responsabilidad ambiental y la excelencia técnica pueden ir de la mano.</p>
+        </div>
+    </div>
+
+    <!-- PÁGINA: MATERIALES DEL FUTURO -->
+    <div id="materiales" class="page">
+        <div class="container">
+            <h1>Materiales del Futuro</h1>
+            <p>Conoce nuestra línea de productos innovadores diseñados para reducir el impacto ambiental sin comprometer la calidad constructiva.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>InnovaCemento Eco-Mix</h3>
+                    <p><strong>Contenido de Carbono:</strong> 45% menos que el cemento tradicional</p>
+                    <p><strong>Composición:</strong> 35% clinker, 45% escorias, 20% cenizas volantes</p>
+                </div>
+
+                <div class="card">
+                    <h3>InnovaCemento Carbon-Zero</h3>
+                    <p><strong>Contenido de Carbono:</strong> 65% menos que el cemento tradicional</p>
+                    <p><strong>Composición:</strong> 25% clinker, 50% residuos reciclados, 15% calizas, 10% aditivos</p>
+                </div>
+
+                <div class="card">
+                    <h3>InnovaCemento Circular</h3>
+                    <p><strong>Contenido de Carbono:</strong> 50% menos que el cemento tradicional</p>
+                    <p><strong>Composición:</strong> 30% clinker, 40% residuos industriales, 20% agregados, 10% biomasa</p>
+                </div>
+            </div>
+
+            <h2>Beneficios Clave</h2>
+            <div class="impact-metric">
+                <div class="metric-value">45-65%</div>
+                <div class="metric-label">Reducción de emisiones de CO₂</div>
+            </div>
+
+            <div class="impact-metric">
+                <div class="metric-value">80%</div>
+                <div class="metric-label">Contenido reciclado</div>
+            </div>
+
+            <div class="impact-metric">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">Compatibilidad técnica</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA: FICHA TÉCNICA -->
+    <div id="ficha" class="page">
+        <div class="container">
+            <h1>Ficha Técnica Sostenible</h1>
+            <p>Comparador interactivo basado en el contenido de carbono equivalente (kg CO₂-eq por tonelada de cemento)</p>
+
+            <div class="comparator">
+                <h2>Criterio Principal: Contenido de Carbono</h2>
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" onclick="toggleComparison('table')">Vista Tabla</button>
+                    <button class="toggle-btn" onclick="toggleComparison('visual')">Vista Visual</button>
+                    <button class="toggle-btn" onclick="toggleComparison('detalle')">Detalles Técnicos</button>
+                </div>
+
+                <div id="table-view" class="hidden-section visible">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Parámetro</th>
+                                <th>Cemento Tradicional</th>
+                                <th>InnovaCemento Low-C</th>
+                                <th>Mejora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CO₂-eq (kg/ton)</td>
+                                <td class="value-traditional">820</td>
+                                <td class="value-innovatech">410</td>
+                                <td><strong style="color: green;">-50%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>% Material Reciclado</td>
+                                <td class="value-traditional">5%</td>
+                                <td class="value-innovatech">65%</td>
+                                <td><strong style="color: green;">+1,200%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Resistencia (MPa)</td>
+                                <td>42</td>
+                                <td>42</td>
+                                <td>Igual</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA: IMPACTO -->
+    <div id="impacto" class="page">
+        <div class="container">
+            <h1>Análisis de Impacto Ambiental</h1>
+            <p>Evaluación del beneficio ambiental de adoptar InnovaCemento Low-C a escala industrial.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 InnovaCemento Low-C | Cemento sostenible para un futuro mejor.</p>
+    </footer>
+
+    <!-- Script básico para la navegación -->
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function toggleComparison(view) {
+            document.querySelectorAll('.hidden-section').forEach(s => s.classList.remove('visible'));
+            document.getElementById(view + '-view').classList.add('visible');
+            document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
